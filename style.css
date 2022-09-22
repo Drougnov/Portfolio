@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    height: 150vh;
+    font-size: 1.125rem;
+    padding-top: 66.5px;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    z-index: 1;
+}
+.nav__logo a{
+    color: black;
+    text-decoration: none;
+}
+.nav__list{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: rgba(135, 207, 235, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style-type: none;
+    text-decoration: none;
+    transform: translateX(150%);
+    transition: all .3s ease-out;
+}
+nav.active .nav__list{
+    transform: translateX(0);
+}
+.nav__list li a{
+    color: black;
+    text-decoration: none;
+}
+.nav__list li:last-child{
+    margin-top: 2rem;
+}
+.nav__list-resume{
+    border: 2px solid red;
+    padding: 1rem 3rem;
+}
+.nav__menu{
+    width: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.nav__menu .hamburger{
+    position: absolute;
+    right: 0;
+    width: 1.75rem;
+    height: 2px;
+    background: black;
+    border-radius: 2px;
+    transition: all .3s linear;
+}
+.hamburger::before,.hamburger::after{
+    position: absolute;
+    content: '';
+    right: 0;
+    height: 2px;
+    background: black;
+    border-radius: 2px;
+    transition: all .3s linear;
+}
+.hamburger::before{
+    width: 2rem;
+    transform: translateY(-.5rem);
+}
+.hamburger::after{
+    width: 1.5rem;
+    transform: translateY(.5rem);
+}
+nav.active .hamburger{
+    transform: translateX(-2.5rem);
+    background: transparent;
+}
+nav.active .hamburger::before{
+    width: 1.75rem;
+    transform: rotate(45deg) translate(2rem, -2rem);
+}
+nav.active .hamburger::after{
+    width: 1.75rem;
+    transform: rotate(-45deg) translate(2rem, 2rem);
+}
