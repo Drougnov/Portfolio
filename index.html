@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
     <title>Rocky Barua</title>
 </head>
 <body>
+
     <div class="scroll scroll-left">
         <span>scroll down</span>
         <i class="fa-solid fa-arrow-down"></i>
@@ -17,31 +18,54 @@
         <span>scroll down</span>
         <i class="fa-solid fa-arrow-down"></i>
     </div>
+    <ul class="media-links">
+        <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="#" aria-label="Frontend Mentor"><i class="fa-solid fa-code"></i></a></li>
+    </ul>
+    <a class="gmail" href="www.drougnov182@gmail.com">www.drougnov182@gmail.com</a>
+
     <nav>
         <div class="nav__logo">
             <a href="#">R</a>
         </div>    
         <ul class="nav__list">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#" class="nav__list-resume">Resume</a></li>
+            <li><a href="resume.pdf" target="_blank" class="nav__list-resume">Resume</a></li>
         </ul>
         <div class="nav__menu">
             <div class="hamburger"></div>
         </div>
     </nav>
-    <div class="container">
+    <main class="container">
         <header>
             <p class="header__hi">Hi, my name is</p>
             <h1><span class="header__name">Rocky Barua,</span><br><span>Web Developer</span></h1>
-            <p class="header__intro">I'm a frontend developer. I enjoy building beautiful and responsive websites.</p>
+            <p class="header__intro">I'm a front-end developer. I enjoy building beautiful, responsive websites with clean, elegant, and efficient code.</p>
             <div class="header__links">
-                <a href="#">My Works</a>
-                <a href="#">Resume</a>
+                <a href="resume.pdf" target="_blank">Resume</a>
+                <a href="#work">My Works</a>
             </div>
         </header>
-    </div>
-    <script src="app.js"></script>
+        <div class="about" id="about">
+            <section class="myself">
+                <h2>Let me introduce myself</h2>
+                <p>Hi! I'm Biplob Barua Rocky from Bangladesh. I'm 21 years old and one year away to be graduated from Chittagong University. I started learning web development in early 2022 and fell in love with it.<br><br>Fast forward to this day, I've built and learned many things. While not coding, you will find me studying, playing video games, or traveling with friends.</p>
+            </section>
+            <section class="skill">
+                <h2>Things I've learned along the way</h2>
+                <span>Html</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>ReactJS</span>
+                <span>Sass</span>
+                <span>Git</span>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
