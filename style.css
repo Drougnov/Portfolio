@@ -10,9 +10,42 @@ body{
     padding-top: 70px;
 }
 
-/* ----------------------------scroll-down---------------------------- */
-.scroll{
+.media-links,.gmail{
     display: none;
+}
+/* ----------------------------scroll-down---------------------------- */
+
+.scroll{
+    position: absolute;
+    top: 85vh;
+    width: max-content;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+.scroll-left{
+    left: 1.5rem;
+}
+.scroll-right{
+    right: 1.5rem;
+}
+.scroll span{
+    margin-left: .15rem;
+    writing-mode: vertical-rl;
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%{
+        transform: translateY(-.5rem);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-.5rem);
+    }
 }
 
 /* ----------nav---------- */
@@ -126,11 +159,13 @@ nav.active .hamburger::after{
 
 /* -----------------------container-------------------- */
 
+
+/* --------------header------------------ */
+
 .container header{
     height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 1.5rem;
     padding-bottom: 2.5rem;
 }
@@ -149,7 +184,7 @@ header h1{
 .header__links{
     max-width: 350px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     gap: 1rem;
     margin: 3rem 0;
 }
@@ -164,6 +199,19 @@ header h1{
     border-radius: 5px;
 }
 
+/* -------------about---------------- */
+
+.container .about{
+    height: 100vh;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.about h2{
+    font-size: clamp(26px,5vw,32px);
+    margin-bottom: 2.5rem;
+}
+
 /* ---------------------media-queries---------------------- */
 
 @media(min-width: 650px){
@@ -171,10 +219,11 @@ header h1{
         font-size: 20px;
     }
     nav{
-        padding: 2rem 3rem;
+        padding: 1.5rem 3rem;
     }
     .container header{
-        max-width: 800px;
+        max-width: 600px;
+        justify-content: center;
         padding: 3rem;
         margin: 0 auto;
     }
@@ -182,40 +231,59 @@ header h1{
         max-width: 450px;
         margin: 1rem 0;
     }
+    .container .about{
+        max-width: 600px;
+        padding: 3rem;
+        margin: 0 auto;
+    }
 }
 @media(min-width: 1000px){
-    .scroll{
-        position: absolute;
-        top: 85vh;
-        width: max-content;
-        font-size: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: .5rem;
-    }
+
+    /* --------------scroll------------- */
+
     .scroll-left{
         left: 3rem;
     }
     .scroll-right{
         right: 3rem;
     }
-    .scroll span{
-        margin-left: .15rem;
+
+    /* -------------------media-links-------------------- */
+
+    .media-links{
+        list-style-type: none;
+        position: absolute;
+        top: 35vh;
+        left: 3rem;
+        width: max-content;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .media-links li a{
+        color: black;
+        transition: all .3s ease-in-out;
+    }
+    .media-links li a:hover{
+        display: block;
+        transform: translateY(-.2rem) scale(1.05);
+    }
+
+    /* ------------------gmail------------------- */
+    .gmail{
+        display: inline;
+        position: absolute;
+        top: 35vh;
+        right: 3rem;
+        color: black;
+        font-size: 16px;
+        text-decoration: none;
         writing-mode: vertical-rl;
-        animation: bounce 1s infinite;
     }
-    @keyframes bounce {
-        0%{
-            transform: translateY(-.5rem);
-        }
-        50%{
-            transform: translateY(0);
-        }
-        100%{
-            transform: translateY(-.5rem);
-        }
-    }
+
+
     .nav__menu{
         display: none;
     }
@@ -241,6 +309,9 @@ header h1{
 }
 @media(min-width: 1200px){
     .container header{
+        max-width: 1000px;
+    }
+    .container .about{
         max-width: 1000px;
     }
 }

@@ -2,6 +2,7 @@ const body = document.body;
 const nav = document.querySelector('nav');
 const toggleMenu = document.querySelector('.hamburger');
 const container= document.querySelector('.container');
+const navLinks = document.querySelectorAll('.nav__list li a')
 
 toggleMenu.addEventListener('click',()=>{
     nav.classList.toggle('active');
@@ -13,6 +14,14 @@ toggleMenu.addEventListener('click',()=>{
         body.style.overflow = "auto";
         container.style.filter = "none";
     }
+})
+
+navLinks.forEach(link=>{
+    link.addEventListener('click',()=>{
+        nav.classList.remove('active');
+        body.style.overflow = "auto";
+        container.style.filter = "none";
+    })
 })
 
 // Sticky navbar
