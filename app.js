@@ -43,3 +43,15 @@ window.addEventListener('scroll', ()=>{
     }
     lastScroll = currentScroll;
 })
+
+//animation on scroll
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver(entries =>{
+    entries.forEach(entry=>{
+        entry.isIntersecting && entry.target.classList.add('show')
+    })
+})
+
+hiddenElements.forEach(el => observer.observe(el));
