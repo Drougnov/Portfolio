@@ -276,11 +276,6 @@ nav.active .hamburger::after{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    transition: all .3s linear;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    -o-transition: all .3s linear;
 }
 .eye::before{
     position: absolute;
@@ -294,14 +289,30 @@ nav.active .hamburger::after{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    animation: moveEye 5s linear;
+    -webkit-animation: moveEye 5s linear;
 }
-.header__avatar .left-eye{
+.header__avatar .left-eye,.header__avatar .left-eye-lid{
     top: 54px;
     left: 54px;
 }
-.header__avatar .right-eye{
+.header__avatar .right-eye,.header__avatar .right-eye-lid{
     top: 54px;
     left: 82px;
+}
+.header__avatar .eye-lid{
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 0;
+    background: #EDB98A;
+    border-radius: 0 0 50% 50%;
+    -webkit-border-radius: 0 0 50% 50%;
+    -moz-border-radius: 0 0 50% 50%;
+    -ms-border-radius: 0 0 50% 50%;
+    -o-border-radius: 0 0 50% 50%;
+    animation: blink 8s linear infinite;
+    -webkit-animation: blink 8s linear infinite;
 }
 .header__text-content{
     display: -webkit-box;
@@ -505,15 +516,15 @@ header h1{
         width: 250px;
         height: 250px;
     }
-    .header__avatar .eye{
+    .header__avatar .eye,.header__avatar .eye-lid{
         width: 18px;
         height: 18px;
     }
-    .header__avatar .left-eye{
+    .header__avatar .left-eye,.header__avatar .left-eye-lid{
         top: 93px;
         left: 95px;
     }
-    .header__avatar .right-eye{
+    .header__avatar .right-eye,.header__avatar .right-eye-lid{
         top: 93px;
         left: 140px;
     }
@@ -549,7 +560,7 @@ header h1{
         width: 350px;
         height: 350px;
     }
-    .header__avatar .eye{
+    .header__avatar .eye,.header__avatar .eye-lid{
         width: 25px;
         height: 25px;
     }
@@ -557,11 +568,11 @@ header h1{
         width: 8px;
         height: 8px;
     }
-    .header__avatar .left-eye{
+    .header__avatar .left-eye,.header__avatar .left-eye-lid{
         top: 130px;
         left: 133px;
     }
-    .header__avatar .right-eye{
+    .header__avatar .right-eye,.header__avatar .right-eye-lid{
         top: 130px;
         left: 195px;
     }
@@ -695,6 +706,34 @@ nav{
     }
     100%{
         opacity: 1;
+    }
+}
+@keyframes moveEye{
+    0%{
+        top: 20%;
+        left: 20%;
+    }
+    90%{
+        top: 20%;
+        left: 20%;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+@keyframes blink{
+    0%{
+        height: 0;
+    }
+    5%{
+        height: 25px;
+    }
+    7%{
+        height: 0;
+    }
+    100%{
+        height: 0;
     }
 }
 .hidden{
