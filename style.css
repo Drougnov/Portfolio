@@ -289,8 +289,8 @@ nav.active .hamburger::after{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    animation: moveEye 5s linear;
-    -webkit-animation: moveEye 5s linear;
+    animation: moveEye 2s linear;
+    -webkit-animation: moveEye 2s linear;
 }
 .header__avatar .left-eye,.header__avatar .left-eye-lid{
     top: 54px;
@@ -361,13 +361,8 @@ header h1{
 .container .about{
     height: 100vh;
     padding: 3rem 1.5rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    display: grid;
+    grid-template-columns: auto;
 }
 .about h2{
     font-size: clamp(26px,5vw,32px);
@@ -539,6 +534,10 @@ header h1{
     }
     .header__links{
         margin: 3rem 0;
+    }
+    .container .about{
+        grid-template-columns: auto auto;
+        gap: 5rem;
     }
 }
 @media(min-width: 1200px){
