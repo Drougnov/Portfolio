@@ -56,6 +56,16 @@ const observer = new IntersectionObserver(entries =>{
 
 hiddenElements.forEach(el => observer.observe(el));
 
+const staggerdElements = document.querySelectorAll('.stag');
+
+const observerTwo = new IntersectionObserver(entries =>{
+    entries.forEach(entry=>{
+        entry.isIntersecting && entry.target.classList.add('staggerd')
+    })
+})
+
+staggerdElements.forEach(el => observerTwo.observe(el));
+
 
 //control eye with mouse
 
