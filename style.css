@@ -373,16 +373,16 @@ header h1{
 }
 .about h2{
     font-size: clamp(26px,5vw,32px);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
 }
-.skill__list{
+.about__skill-list{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
     gap: 1rem;
 }
-.skill__list li{
+.about__skill-list li{
     background: rgba(0, 0, 0, 0.1);
     font-size: 1rem;
     padding: .5rem 1rem;
@@ -391,6 +391,45 @@ header h1{
     -moz-border-radius: .3rem;
     -ms-border-radius: .3rem;
     -o-border-radius: .3rem;
+}
+
+/* -------------work---------------- */
+
+.container .work{
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+.work h2{
+    font-size: clamp(26px,5vw,32px);
+    margin-bottom: 2.5rem;
+}
+.work .project-section{
+    display: grid;
+    gap: 3rem;
+}
+.project-section .project{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.project__image{
+    width: 100%;
+}
+.project__image img{
+    width: 100%;
+    max-width: 350px;
+}
+.project__text{
+    text-align: left;
+}
+.project__text-type{
+    font-size: 13px;
+}
+.project__text-name{
+    font-size: clamp(24px, 5vw, 28px);
+}
+.project__text-info{
+    
 }
 
 /* ---------------------media-queries---------------------- */
@@ -429,7 +468,7 @@ header h1{
     .about h2{
         margin-bottom: 3rem;
     }
-    .skill__list{
+    .about__skill-list{
         justify-content: flex-start;
     }
 }
@@ -588,7 +627,7 @@ header h1{
 }
 @media(min-width: 1350px){
     .container header{
-        max-width: 1100px;
+        /* max-width: 1100px; */
     }
     .header__avatar{
         width: 350px;
@@ -614,7 +653,8 @@ header h1{
         font-size: 70px;
     }
     .container .about{
-        max-width: 1100px;
+        /* max-width: 1100px; */
+        gap: 10rem;
     }
 }
 
@@ -819,8 +859,8 @@ nav{
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
 }
-.skill__list li:nth-child(2){transition-delay: 200ms;}
-.skill__list li:nth-child(3){transition-delay: 400ms;}
-.skill__list li:nth-child(4){transition-delay: 600ms;}
-.skill__list li:nth-child(5){transition-delay: 800ms;}
-.skill__list li:nth-child(6){transition-delay: 1000ms;}
+.about__skill-list li:nth-child(2){transition-delay: 200ms;}
+.about__skill-list li:nth-child(3){transition-delay: 400ms;}
+.about__skill-list li:nth-child(4){transition-delay: 600ms;}
+.about__skill-list li:nth-child(5){transition-delay: 800ms;}
+.about__skill-list li:nth-child(6){transition-delay: 1000ms;}
