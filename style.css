@@ -79,6 +79,23 @@ p{
                 transform: translateY(-.5rem);
     }
 }
+.go-top{
+    position: fixed;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    transform: translateY(5rem);
+    -webkit-transform: translateY(5rem);
+    -moz-transform: translateY(5rem);
+    -ms-transform: translateY(5rem);
+    -o-transform: translateY(5rem);
+    transition: all .3s linear;
+    z-index: 10;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    cursor: pointer;
+}
 
 /* ----------nav---------- */
 

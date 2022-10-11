@@ -42,6 +42,14 @@ window.addEventListener('scroll', ()=>{
         body.classList.remove('scroll-down')
     }
     lastScroll = currentScroll;
+
+    const goTop = document.querySelector('.go-top');
+    console.log(currentScroll >= 740)
+    if(currentScroll >= 740){
+        goTop.style.transform = "translateY(0)";
+    }else{
+        goTop.style.transform = "translateY(5rem)";
+    }
 })
 
 //animation on scroll
