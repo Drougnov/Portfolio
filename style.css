@@ -660,20 +660,27 @@ header h1{
         max-width: 750px;
         padding: 5rem 0;
     }
+    .work h2{
+        text-align: center;
+    }
     .project-section .project{
         align-items: center;
         grid-template-columns: auto auto;
         gap: 3rem;
     }
     .project__text{
+        margin-left: -100px;
         text-align: right;
     }
     .project-section .project:nth-child(even) .project__image{
         order: 2;
     }
     .project-section .project:nth-child(even) .project__text{
+        margin-left: 0;
+        margin-right: -100px;
         order: 1;
         text-align: left;
+        z-index: 1;
     }
     .project__text-lang{
         margin: 2rem 0;
