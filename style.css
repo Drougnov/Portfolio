@@ -661,7 +661,8 @@ header h1{
         padding: 5rem 0;
     }
     .project-section .project{
-        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-template-columns: auto auto;
         gap: 3rem;
     }
     .project__text{
