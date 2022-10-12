@@ -6,12 +6,24 @@
             box-sizing: border-box;
     scroll-behavior: smooth;
 }
+:root{
+    --header-txt: #ccd6f6;
+    --primary-txt: #8892B0;
+    --main-bg: #0a192f;
+    --cta: #64ffda;
+}
 body{
+    color: var(--primary-txt);
+    background: var(--main-bg);
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     line-height: 1.3;
     padding-top: 70px;
     position: relative;
+}
+h1,h2,h3{
+    color: var(--header-txt);
+    font-weight: 700;
 }
 p{
     line-height: 1.5;
@@ -121,7 +133,7 @@ nav{
     transition: all .3s ease-in-out;
 }
 .nav__logo a{
-    color: black;
+    color: var(--cta);
     text-decoration: none;
 }
 .nav__list{
@@ -160,7 +172,7 @@ nav.active .nav__list{
             transform: translateX(0);
 }
 .nav__list li a{
-    color: black;
+    color: var(--header-txt);
     font-size: 15px;
     text-decoration: none;
 }
@@ -168,7 +180,7 @@ nav.active .nav__list{
     margin-top: 2rem;
 }
 .nav__list-resume{
-    border: 2px solid red;
+    border: 2px solid var(--cta);
     padding: 1rem 3rem;
 }
 
@@ -358,6 +370,9 @@ header h1{
 .header__name{
     line-height: 1.2;
 }
+.header__bio{
+    color: var(--primary-txt);
+}
 .header__intro{
     margin: .5rem auto;
 }
@@ -373,8 +388,8 @@ header h1{
     text-align: center;
     text-decoration: none;
     padding: .75rem 0;
-    color: black;
-    border: 2px solid red;
+    color: var(--primary-txt);
+    border: 2px solid var(--cta);
     border-radius: 5px;
 }
 
@@ -656,7 +671,7 @@ footer .contact{
         gap: 1rem;
     }
     .media-links li a{
-        color: black;
+        color: var(--primary-txt);
         -webkit-transition: all .3s ease-in-out;
         -o-transition: all .3s ease-in-out;
         transition: all .3s ease-in-out;
@@ -674,7 +689,7 @@ footer .contact{
         position: absolute;
         top: 35vh;
         right: 3rem;
-        color: black;
+        color: var(--primary-txt);
         font-size: 16px;
         text-decoration: none;
         -webkit-writing-mode: vertical-rl;
