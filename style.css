@@ -259,7 +259,7 @@ nav.active .hamburger::after{
             transform: translate3d(0 , -100%, 0);
 }
 .scroll-up nav{
-    background: rgba(135, 207, 235, 0.8);
+    background: #0a192fd9;
     -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
