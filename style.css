@@ -142,7 +142,7 @@ nav{
     right: 0;
     width: 250px;
     height: 100vh;
-    background: hsla(217, 64%, 11%, 0.5);
+    background: hsla(217, 64%, 11%, 0.8);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -504,12 +504,16 @@ header h1{
     font-size: 13px;
 }
 .project__text-name{
+    width: max-content;
     color: var(--header-txt);
     display: block;
     margin: .5rem 0;
     text-decoration: none;
     font-size: clamp(24px, 5vw, 28px);
     font-weight: 500;
+}
+.project__text-name:hover{
+    color: var(--cta);
 }
 .project__text-info{
     font-size: 1rem;
@@ -526,6 +530,7 @@ header h1{
     gap: .5rem;
 }
 .project__text-lang span{
+    color: var(--cta);
     background: rgba(0, 0, 0, 0.1);
     font-size: 13px;
     padding: .5rem 1rem;
@@ -541,11 +546,33 @@ header h1{
     margin-top: 1.125rem;
 }
 .project__text-links a{
+    color: var(--header-txt);
     font-size: 1.5rem;
+}
+.project__text-links a:hover{
+    color: var(--cta);
 }
 .work__view-more{
     display: block;
-    margin-top: 3rem;
+    width: max-content;
+    color: var(--main-bg);
+    background: var(--cta);
+    border: 2px solid var(--cta);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 1rem 2rem;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+.work__view-more:hover{
+    color: var(--cta);
+    background: var(--main-bg);
 }
 footer{
     height: 100vh;
@@ -833,6 +860,29 @@ footer .contact{
         margin-left: -100px;
         text-align: right;
     }
+    .project__image{
+        position: relative;
+    }
+    .project__image::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--cta);
+        inset: 0;
+        mix-blend-mode: darken;
+        z-index: 1;
+    }
+    .project__image:hover::after{
+        inset: unset;
+        mix-blend-mode: normal;
+    }
+    .project__image img{
+        display: block;
+        height: 100%;
+    }
     .project-section .project:nth-child(even) .project__image{
         order: 2;
     }
@@ -843,10 +893,20 @@ footer .contact{
         text-align: left;
         z-index: 1;
     }
+    .project__text-name{
+        margin-left: auto;
+    }
+    .project-section .project:nth-child(even) .project__text-name{
+        margin-left: 0;
+        margin-right: auto;
+    }
     .project__text-info{
         background: hsl(218, 58%, 16%);
         box-shadow: 0 5px 5px 0 rgb(0 0 0 / 10%);
         padding: 1.5rem;
+    }
+    .project__text-info:hover{
+        box-shadow: 0 10px 10px 0 rgb(0 0 0 / 20%);
     }
     .project__text-lang{
         margin: 2rem 0;
@@ -860,6 +920,9 @@ footer .contact{
     }
     .project-section .project:nth-child(even) .project__text-links{
         justify-content: flex-start;
+    }
+    .work__view-more{
+        margin-top: 8rem;
     }
     .contact h2{
         font-size: 60px;
