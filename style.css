@@ -96,8 +96,8 @@ p{
     position: fixed;
     right: 2.5rem;
     bottom: 2.5rem;
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,8 +352,8 @@ nav.active .hamburger::after{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    animation: moveEye 2s linear;
-    -webkit-animation: moveEye 2s linear;
+    animation: moveEye 2.5s linear;
+    -webkit-animation: moveEye 2.5s linear;
 }
 .header__avatar .left-eye,.header__avatar .left-eye-lid{
     top: 54px;
@@ -681,6 +681,10 @@ footer .contact{
 @media(min-width: 650px){
     body{
         font-size: 18px;
+    }
+    .go-top{
+        width: 60px;
+        height: 60px;
     }
     nav{
         padding: 1.5rem 3rem;
