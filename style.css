@@ -377,6 +377,7 @@ header h1{
     font-size: 35px;
 }
 .header__hi{
+    color: var(--cta);
     margin-bottom: .5rem;
 }
 .header__name{
@@ -595,18 +596,28 @@ footer .contact{
 .contact a{
     width: 80px;
     height: 80px;
+    color: var(--cta);
     font-size: 2rem;
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    border: 1px solid gray;
+    border: 2px solid var(--cta);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+.contact a:hover{
+    color: var(--main-bg);
+    background: var(--cta);
 }
 .footer__links{
     position: absolute;
@@ -621,11 +632,21 @@ footer .contact{
 .footer__links li a{
     width: 40px;
     height: 40px;
+    color: var(--cta);
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    border: 1px solid black;
+    border: 1px solid var(--cta);
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+.footer__links li a:hover{
+    color: var(--main-bg);
+    background: var(--cta);
 }
 .footer__text{
     position: absolute;
@@ -633,6 +654,9 @@ footer .contact{
     width: 100%;
     font-size: .8rem;
     text-align: center;
+}
+.footer__text-heart{
+    color: var(--cta);
 }
 
 /* ---------------------media-queries---------------------- */
@@ -945,9 +969,6 @@ footer .contact{
     }
 }
 @media(min-width: 1350px){
-    .container header{
-        /* max-width: 1100px; */
-    }
     .header__avatar{
         width: 350px;
         height: 350px;
@@ -972,7 +993,6 @@ footer .contact{
         font-size: 70px;
     }
     .container .about{
-        /* max-width: 1100px; */
         gap: 10rem;
     }
     .contact h2{
