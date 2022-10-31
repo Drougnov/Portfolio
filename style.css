@@ -724,6 +724,18 @@ footer .contact{
 .footer__text-heart{
     color: var(--cta);
 }
+.footer__text a{
+    color: var(--primary-txt);
+    text-decoration: none;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+.footer__text a:hover{
+    color: var(--cta);
+}
 
 /* ---------------------media-queries---------------------- */
 
