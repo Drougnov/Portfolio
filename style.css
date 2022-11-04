@@ -463,6 +463,15 @@ header h1{
     font-size: clamp(26px,5vw,32px);
     margin-bottom: 2.5rem;
 }
+.about__myself a{
+    display: block;
+    color: var(--cta);
+    text-decoration: none;
+    margin-top: 1rem;
+}
+.about__myself a:hover{
+    text-decoration: underline;
+}
 .about__skill-list{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -473,9 +482,10 @@ header h1{
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     list-style-type: none;
-    gap: 1rem;
+    column-gap: 3.5rem;
+    row-gap: 1rem;
 }
-.about__skill-list li{
+/* .about__skill-list li{
     color: var(--main-bg);
     background: var(--cta);
     font-size: 1rem;
@@ -486,6 +496,10 @@ header h1{
     -moz-border-radius: .3rem;
     -ms-border-radius: .3rem;
     -o-border-radius: .3rem;
+} */
+.about__skill-list li{
+    color: var(--cta);
+    font-size: 5rem;
 }
 
 /* -------------work---------------- */
