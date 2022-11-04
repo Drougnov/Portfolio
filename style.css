@@ -380,8 +380,8 @@ nav.active .hamburger::after{
     -moz-border-radius: 0 0 50% 50%;
     -ms-border-radius: 0 0 50% 50%;
     -o-border-radius: 0 0 50% 50%;
-    animation: blink 8s linear infinite;
-    -webkit-animation: blink 8s linear infinite;
+    animation: blink 5s linear infinite;
+    -webkit-animation: blink 5s linear infinite;
 }
 .header__text-content{
     display: -webkit-box;
@@ -464,10 +464,8 @@ header h1{
     margin-bottom: 2.5rem;
 }
 .about__myself a{
-    display: block;
     color: var(--cta);
     text-decoration: none;
-    margin-top: 1rem;
 }
 .about__myself a:hover{
     text-decoration: underline;
