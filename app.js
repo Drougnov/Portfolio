@@ -4,10 +4,11 @@ const toggleMenu = document.querySelector('.hamburger');
 const container= document.querySelector('.container');
 const navLinks = document.querySelectorAll('.nav__list li a')
 
+// hamburger clicked
 toggleMenu.addEventListener('click',()=>{
     nav.classList.toggle('active');
     
-    if(nav.classList.contains('active')){   //stop body scrolling when nav open
+    if(nav.classList.contains('active')){
         body.style.overflow = "hidden";
         container.style.filter = "blur(2px)";
     }else{
@@ -15,7 +16,7 @@ toggleMenu.addEventListener('click',()=>{
         container.style.filter = "none";
     }
 })
-
+// close nav when a navlink is clicked
 navLinks.forEach(link=>{
     link.addEventListener('click',()=>{
         nav.classList.remove('active');
@@ -43,13 +44,15 @@ window.addEventListener('scroll', ()=>{
     }
     lastScroll = currentScroll;
 
+    // Scroll-back-top button display position 
     const goTop = document.querySelector('.go-top');
-    if(currentScroll >= 740){
+    if(currentScroll >= 700){
         goTop.style.transform = "translateY(0)";
     }else{
         goTop.style.transform = "translateY(10rem)";
     }
 })
+
 
 //animation on scroll
 
