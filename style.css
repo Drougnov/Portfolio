@@ -110,23 +110,23 @@ p{
     color: var(--cta);
     background: var(--main-bg);
     border: 2px solid var(--cta);
-    border-radius: 50%;
-    transform: translateY(10rem);
-    -webkit-transform: translateY(10rem);
-    -moz-transform: translateY(10rem);
-    -ms-transform: translateY(10rem);
-    -o-transform: translateY(10rem);
-    transition: all .3s linear;
-    z-index: 10;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    cursor: pointer;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transform: translateY(10rem);
+    -moz-transform: translateY(10rem);
+    -ms-transform: translateY(10rem);
+    -o-transform: translateY(10rem);
+    transform: translateY(10rem);
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    z-index: 10;
+    cursor: pointer;
 }
 .go-top:hover{
     color: var(--main-bg);
@@ -208,12 +208,12 @@ nav.active .nav__list{
 .nav__list li .resume{
     color: var(--cta);
     border: 2px solid var(--cta);
-    border-radius: .3rem;
-    padding: .5rem 1.5rem;
     -webkit-border-radius: .3rem;
     -moz-border-radius: .3rem;
     -ms-border-radius: .3rem;
     -o-border-radius: .3rem;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
 }
 .nav__list li .resume:hover{
     color: var(--main-bg);
@@ -338,11 +338,11 @@ nav.active .hamburger::after{
     width: 13px;
     height: 13px;
     background: white;
-    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    border-radius: 50%;
 }
 .eye::before{
     position: absolute;
@@ -353,13 +353,13 @@ nav.active .hamburger::after{
     height: 5px;
     margin: 3px;
     background: black;
-    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    animation: moveEye 2.5s linear;
+    border-radius: 50%;
     -webkit-animation: moveEye 2.5s linear;
+    animation: moveEye 2.5s linear;
 }
 .header__avatar .left-eye,.header__avatar .left-eye-lid{
     top: 54px;
@@ -375,13 +375,13 @@ nav.active .hamburger::after{
     width: 13px;
     height: 0;
     background: #EDB98A;
-    border-radius: 0 0 50% 50%;
     -webkit-border-radius: 0 0 50% 50%;
     -moz-border-radius: 0 0 50% 50%;
     -ms-border-radius: 0 0 50% 50%;
     -o-border-radius: 0 0 50% 50%;
-    animation: blink 5s linear infinite;
+    border-radius: 0 0 50% 50%;
     -webkit-animation: blink 5s linear infinite;
+    animation: blink 5s linear infinite;
 }
 .header__text-content{
     display: -webkit-box;
@@ -427,11 +427,11 @@ header h1{
     color: var(--cta);
     border: 2px solid var(--cta);
     border-radius: 5px;
-    transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
+    transition: all .3s linear;
 }
 .header__links a:hover{
     color: var(--main-bg);
@@ -523,16 +523,16 @@ header h1{
     z-index: -1;
 }
 .project__image:hover img{
-    transform: scale(1.05);
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
-    transition: all .5s ease-out;
+    transform: scale(1.05);
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -ms-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
+    transition: all .5s ease-out;
 }
 .project__image img{
     width: 100%;
@@ -563,11 +563,11 @@ header h1{
 .project__text-info{
     font-size: 1rem;
     margin: 1.125rem 0;
-    border-radius: .3rem;
     -webkit-border-radius: .3rem;
     -moz-border-radius: .3rem;
     -ms-border-radius: .3rem;
     -o-border-radius: .3rem;
+    border-radius: .3rem;
 }
 .project__text-lang{
     display: -webkit-box;
@@ -582,11 +582,11 @@ header h1{
     background: rgba(0, 0, 0, 0.1);
     font-size: 13px;
     padding: .5rem 1rem;
-    border-radius: .3rem;
     -webkit-border-radius: .3rem;
     -moz-border-radius: .3rem;
     -ms-border-radius: .3rem;
     -o-border-radius: .3rem;
+    border-radius: .3rem;
 }
 .project__text-links{
     display: -webkit-box;
@@ -616,11 +616,11 @@ header h1{
     margin: 0 auto;
     margin-top: 5rem;
     padding: 1rem 2rem;
-    transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
+    transition: all .3s linear;
 }
 .work__view-more:hover{
     color: var(--cta);
@@ -670,16 +670,16 @@ footer .contact{
             align-items: center;
     margin: 0 auto;
     border: 2px solid var(--cta);
-    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    transition: all .3s linear;
+    border-radius: 50%;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
+    transition: all .3s linear;
 }
 .contact a:hover{
     color: var(--main-bg);
@@ -716,11 +716,11 @@ footer .contact{
             align-items: center;
     text-decoration: none;
     border: 1px solid var(--cta);
-    transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
+    transition: all .3s linear;
 }
 .footer__links li a:hover{
     color: var(--main-bg);
@@ -739,11 +739,11 @@ footer .contact{
 .footer__text a{
     color: var(--primary-txt);
     text-decoration: none;
-    transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
+    transition: all .3s linear;
 }
 .footer__text a:hover{
     color: var(--cta);
@@ -883,11 +883,11 @@ footer .contact{
         -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
         writing-mode: vertical-rl;
-        transition: all .3s linear;
         -webkit-transition: all .3s linear;
         -moz-transition: all .3s linear;
         -ms-transition: all .3s linear;
         -o-transition: all .3s linear;
+        transition: all .3s linear;
 }
     .gmail:hover{
         color: var(--cta);
@@ -1132,107 +1132,107 @@ footer .contact{
 
 /* animation & transition */
 nav{
-    animation: fadeFromTop .75s linear;
     -webkit-animation: fadeFromTop .75s linear;
+    animation: fadeFromTop .75s linear;
 }
 .header__avatar{
-    animation: fadeFromRight 1.5s linear;
     -webkit-animation: fadeFromRight 1.5s linear;
+    animation: fadeFromRight 1.5s linear;
 }
 .header__text-content{
-    animation: fadeIn 1s linear;
     -webkit-animation: fadeIn 1.3s linear;
+    animation: fadeIn 1s linear;
 }
 .gmail,.scroll,.media-links{
-    animation: fadeIn 2.75s linear;
     -webkit-animation: fadeIn 2.75s linear;
+    animation: fadeIn 2.75s linear;
 }
 @-webkit-keyframes fadeFromTop{
     0%{
         opacity: 0;
-        transform: translateY(-100px);
         -webkit-transform: translateY(-100px);
         -moz-transform: translateY(-100px);
         -ms-transform: translateY(-100px);
         -o-transform: translateY(-100px);
+        transform: translateY(-100px);
     }
     100%{
         opacity: 1;
-        transform: translateY(0);
         -webkit-transform: translateY(0);
         -moz-transform: translateY(0);
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 @keyframes fadeFromTop{
     0%{
         opacity: 0;
-        transform: translateY(-100px);
         -webkit-transform: translateY(-100px);
         -moz-transform: translateY(-100px);
         -ms-transform: translateY(-100px);
         -o-transform: translateY(-100px);
+        transform: translateY(-100px);
     }
     100%{
         opacity: 1;
-        transform: translateY(0);
         -webkit-transform: translateY(0);
         -moz-transform: translateY(0);
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 @-webkit-keyframes fadeFromRight {
     0%{
         opacity: 0;
-        transform: translateX(50px);
         -webkit-transform: translateX(50px);
         -moz-transform: translateX(50px);
         -ms-transform: translateX(50px);
         -o-transform: translateX(50px);
+        transform: translateX(50px);
 }
     80%{
         opacity: 0;
-        transform: translateX(50px);
         -webkit-transform: translateX(50px);
         -moz-transform: translateX(50px);
         -ms-transform: translateX(50px);
         -o-transform: translateX(50px);
+        transform: translateX(50px);
 }
     100%{
         opacity: 1;
-        transform: translateX(0);
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
+        transform: translateX(0);
     }
 }
 @keyframes fadeFromRight {
     0%{
         opacity: 0;
-        transform: translateX(50px);
         -webkit-transform: translateX(50px);
         -moz-transform: translateX(50px);
         -ms-transform: translateX(50px);
         -o-transform: translateX(50px);
+        transform: translateX(50px);
 }
     80%{
         opacity: 0;
-        transform: translateX(50px);
         -webkit-transform: translateX(50px);
         -moz-transform: translateX(50px);
         -ms-transform: translateX(50px);
         -o-transform: translateX(50px);
+        transform: translateX(50px);
 }
     100%{
         opacity: 1;
-        transform: translateX(0);
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
+        transform: translateX(0);
     }
 }
 @-webkit-keyframes fadeIn {
@@ -1315,49 +1315,49 @@ nav{
 }
 .hidden{
     opacity: 0;
+    -webkit-filter: blur(1px);
     filter: blur(1px);
-    transform: translateY(100px);
-    transition: all 1s linear;
     -webkit-transform: translateY(100px);
     -moz-transform: translateY(100px);
     -ms-transform: translateY(100px);
     -o-transform: translateY(100px);
+    transform: translateY(100px);
     -webkit-transition: all 1s linear;
     -moz-transition: all 1s linear;
     -ms-transition: all 1s linear;
     -o-transition: all 1s linear;
-    -webkit-filter: blur(1px);
+    transition: all 1s linear;
 }
 .show{
     opacity: 1;
+    -webkit-filter: blur(0);
     filter: blur(0);
-    transform: translateY(0);
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
-    -webkit-filter: blur(0);
+    transform: translateY(0);
 }
 .stag{
     display: block;
     opacity: 0;
-    filter: blur(1px);
     -webkit-filter: blur(1px);
-    transform: translateX(50px);
+    filter: blur(1px);
     -webkit-transform: translateX(50px);
     -moz-transform: translateX(50px);
     -ms-transform: translateX(50px);
     -o-transform: translateX(50px);
+    transform: translateX(50px);
 }
 .staggerd{
     opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
     -webkit-filter: blur(0);
+    filter: blur(0);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
+    transform: translateX(0);
 }
 .about__skill-list li:nth-child(2){-webkit-transition-delay: 200ms;-o-transition-delay: 200ms;transition-delay: 200ms;}
 .about__skill-list li:nth-child(3){-webkit-transition-delay: 400ms;-o-transition-delay: 400ms;transition-delay: 400ms;}
