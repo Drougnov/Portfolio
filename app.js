@@ -53,27 +53,27 @@ window.addEventListener("scroll", () => {
     }
 });
 
-//animation on scroll
+//logo animation
 
-const hiddenElements = document.querySelectorAll(".hidden");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        entry.isIntersecting && entry.target.classList.add("show");
-    });
+const anim = anime.timeline({
+    loop: true,
+    direction: "alternate",
 });
 
-hiddenElements.forEach((el) => observer.observe(el));
-
-const staggerdElements = document.querySelectorAll(".stag");
-
-const observerTwo = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        entry.isIntersecting && entry.target.classList.add("staggerd");
-    });
+anim.add({
+    targets: "#hexagon path",
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: "easeInOutQuart",
+    duration: 2000,
+    delay: function (el, i) {
+        return i * 250;
+    },
+}).add({
+    targets: "#hexagon #B",
+    duration: 1000,
+    opacity: 1,
+    easing: "easeInOutQuart",
 });
-
-staggerdElements.forEach((el) => observerTwo.observe(el));
 
 //control eye with mouse
 
