@@ -3,11 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         />
         <link rel="stylesheet" href="style.css" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+            integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
         <script defer src="app.js"></script>
         <title>Rocky Barua</title>
     </head>
@@ -66,9 +73,11 @@
         ></a>
 
         <nav>
-            <div class="nav__logo">
-                <a href="#">R</a>
-            </div>
+            <a href="#" class="nav__logo">
+                <svg>
+                    <use xlink:href="./images/logo.svg#logo" />
+                </svg>
+            </a>
             <ul class="nav__list">
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
@@ -119,7 +128,7 @@
                 </div>
             </header>
             <div class="about" id="about">
-                <section class="about__myself hidden">
+                <section class="about__myself">
                     <h2>About Me</h2>
                     <p>
                         Hi! I'm Biplob Barua Rocky from Bangladesh. I'm a
@@ -136,24 +145,24 @@
                         >
                     </p>
                 </section>
-                <section class="about__skill hidden">
+                <section class="about__skill">
                     <h2>Things I've learned</h2>
                     <ul class="about__skill-list">
-                        <li class="stag"><i class="fa-brands fa-html5"></i></li>
-                        <li class="stag">
+                        <li><i class="fa-brands fa-html5"></i></li>
+                        <li>
                             <i class="fa-brands fa-css3-alt"></i>
                         </li>
-                        <li class="stag"><i class="fa-brands fa-js"></i></li>
-                        <li class="stag"><i class="fa-brands fa-react"></i></li>
-                        <li class="stag"><i class="fa-brands fa-sass"></i></li>
-                        <li class="stag"><i class="fa-brands fa-git"></i></li>
+                        <li><i class="fa-brands fa-js"></i></li>
+                        <li><i class="fa-brands fa-react"></i></li>
+                        <li><i class="fa-brands fa-sass"></i></li>
+                        <li><i class="fa-brands fa-git"></i></li>
                     </ul>
                 </section>
             </div>
             <div class="work" id="work">
-                <h2 class="hidden">Some of my recent works</h2>
+                <h2>Some of my recent works</h2>
                 <div class="project-section">
-                    <div class="project hidden">
+                    <div class="project">
                         <a
                             href="https://drougnov.github.io/Appvilla"
                             target="_blank"
@@ -201,7 +210,7 @@
                             </div>
                         </section>
                     </div>
-                    <div class="project hidden">
+                    <div class="project">
                         <a
                             href="https://drougnov.github.io/todo-app-main"
                             target="_blank"
@@ -249,7 +258,7 @@
                             </div>
                         </section>
                     </div>
-                    <div class="project hidden">
+                    <div class="project">
                         <a
                             href="https://drougnov.github.io/url-shortening-api-master"
                             target="_blank"
@@ -311,7 +320,7 @@
             </div>
         </main>
         <footer>
-            <section class="contact hidden" id="contact">
+            <section class="contact" id="contact">
                 <h2>Get in touch</h2>
                 <p>
                     Got a proposal or want to say hello? Send a mail. I'll
