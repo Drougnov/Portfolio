@@ -4,6 +4,15 @@ const toggleMenu = document.querySelector(".hamburger");
 const container = document.querySelector(".container");
 const navLinks = document.querySelectorAll(".nav__list li a");
 
+// preloader
+window.addEventListener("load", function () {
+    var preloader = document.getElementById("preloader");
+    this.setTimeout(() => {
+        preloader.style.display = "none";
+        body.style.overflow = "visible";
+    }, 3200);
+});
+
 // hamburger clicked
 toggleMenu.addEventListener("click", () => {
     nav.classList.toggle("active");
@@ -56,12 +65,12 @@ window.addEventListener("scroll", () => {
 //logo animation
 
 const anim = anime.timeline({
-    loop: true,
+    loop: false,
     direction: "alternate",
 });
 
 anim.add({
-    targets: "#hexagon path",
+    targets: "#animatedLogo path",
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: "easeInOutQuart",
     duration: 2000,
@@ -69,7 +78,7 @@ anim.add({
         return i * 250;
     },
 }).add({
-    targets: "#hexagon #B",
+    targets: "#animatedLogo #letter",
     duration: 1000,
     opacity: 1,
     easing: "easeInOutQuart",
