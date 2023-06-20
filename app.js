@@ -4,6 +4,12 @@ const toggleMenu = document.querySelector(".hamburger");
 const container = document.querySelector(".container");
 const navLinks = document.querySelectorAll(".nav__list li a");
 
+// Wait for the svg animted logo to load
+const animatedLogo = document.getElementById("animatedLogo");
+animatedLogo.addEventListener("load", () => {
+    animatedLogo.style.display = "block";
+});
+
 // preloader
 window.addEventListener("load", function () {
     var preloader = document.getElementById("preloader");
