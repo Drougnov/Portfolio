@@ -394,6 +394,10 @@ nav.active .hamburger::after {
     -webkit-animation: moveEye 2.5s linear;
     animation: moveEye 2.5s linear;
 }
+.inactive-eye::before {
+    top: 5px;
+    left: 5px;
+}
 .header__avatar .left-eye,
 .header__avatar .left-eye-lid {
     top: 54px;

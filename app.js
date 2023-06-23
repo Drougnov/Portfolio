@@ -92,15 +92,16 @@ anim.add({
 
 //control eye with mouse
 
+const eyes = document.querySelectorAll(".eye");
+const anchor = document.querySelector(".header__avatar-img");
+
 window.addEventListener("mousemove", (e) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
-    const anchor = document.querySelector(".header__avatar-img");
     const rekt = anchor.getBoundingClientRect();
     const anchorX = rekt.left + rekt.width / 2;
     const anchorY = rekt.top + rekt.height / 2;
     const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
-    const eyes = document.querySelectorAll(".eye");
     eyes.forEach((eye) => {
         eye.style.transform = `rotate(${angleDeg - 45}deg)`;
     });
@@ -113,3 +114,31 @@ function angle(cx, cy, ex, ey) {
     const deg = (rad * 180) / Math.PI;
     return deg;
 }
+
+// reset the eye position if user is inactive for 3 seconds
+
+let userInactivityTimer;
+
+document.addEventListener("mousemove", resetTimer);
+document.addEventListener("keydown", resetTimer);
+
+// Function to reset the user inactivity timer
+function resetTimer() {
+    clearTimeout(userInactivityTimer);
+    userInactivityTimer = setTimeout(handleUserInactive, 3000);
+}
+
+function handleUserInactive() {
+    eyes.forEach((eye) => {
+        eye.classList.add("inactive-eye");
+    });
+}
+
+function handleUserActive() {
+    eyes.forEach((eye) => {
+        eye.classList.remove("inactive-eye");
+    });
+}
+
+document.addEventListener("mousemove", handleUserActive);
+document.addEventListener("keydown", handleUserActive);
