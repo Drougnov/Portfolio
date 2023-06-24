@@ -377,6 +377,11 @@ nav.active .hamburger::after {
     -o-border-radius: 50%;
     border-radius: 50%;
 }
+
+.inactive-eye::before {
+    top: 1px;
+    left: 1px;
+}
 .eye::before {
     position: absolute;
     content: "";
@@ -386,17 +391,13 @@ nav.active .hamburger::after {
     height: 5px;
     margin: 3px;
     background: black;
+    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    border-radius: 50%;
     -webkit-animation: moveEye 2.5s linear;
     animation: moveEye 2.5s linear;
-}
-.inactive-eye::before {
-    top: 5px;
-    left: 5px;
 }
 .header__avatar .left-eye,
 .header__avatar .left-eye-lid {
@@ -987,6 +988,14 @@ footer .contact {
         top: 93px;
         left: 140px;
     }
+    .eye::before {
+        width: 7px;
+        height: 7px;
+    }
+    .inactive-eye::before {
+        top: 3px;
+        left: 3px;
+    }
     .header__text-content {
         text-align: left;
     }
@@ -1132,6 +1141,10 @@ footer .contact {
     .container .work {
         max-width: 1000px;
         gap: 10rem;
+    }
+    .inactive-eye::before {
+        top: 6px;
+        left: 6px;
     }
 }
 @media (min-width: 1350px) {
