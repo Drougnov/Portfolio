@@ -88,9 +88,6 @@ anim.add({
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: "easeInOutQuart",
     duration: 1000,
-    delay: function (el, i) {
-        return i * 250;
-    },
 });
 
 anim.add({
@@ -102,82 +99,80 @@ anim.add({
     .add(
         {
             targets: "nav",
-            translateY: [-300, 0],
-            easing: "easeInOutSine",
+            translateY: [-25, 0],
             opacity: [0, 1],
+            easing: "linear",
             duration: durationTime,
         },
         "-=500"
     )
-    .add({
-        targets: ".nav__list li",
-        translateX: [100, 0],
-        duration: durationTime,
-        easing: "easeInOutSine",
-        opacity: [0, 1],
-        delay: (el, i) => {
-            return 300 + 100 * i;
+    .add(
+        {
+            targets: ".nav__list li",
+            translateY: [-25, 0],
+            opacity: [0, 1],
+            duration: durationTime,
+            easing: "linear",
+            delay: (el, i) => {
+                return 300 + 100 * i;
+            },
         },
-    })
+        "-=250"
+    )
     .add(
         {
             targets: ".header__text-content > *",
-            translateY: [-100, 0],
-            easing: "cubicBezier(.5, .05, .1, .3)",
+            translateY: [50, 0],
             opacity: [0, 1],
+            easing: "linear",
             duration: durationTime,
             delay: (el, i) => {
                 return 300 + 100 * i;
             },
         },
-        "-=1000"
+        "-=150"
     )
     .add(
         {
             targets: ".header__avatar",
-            translateY: [-100, 0],
             opacity: [0, 1],
-            easing: "cubicBezier(.5, .05, .1, .3)",
+            easing: "linear",
             duration: durationTime,
         },
-        "-=800"
+        "-=100"
     )
     .add(
         {
             targets: ".media-links",
-            translateY: [-100, 0],
+            translateY: [50, 0],
             opacity: [0, 1],
             duration: durationTime,
-            easing: "easeInOutSine",
+            easing: "linear",
             delay: (el, i) => {
                 return 300 + 100 * i;
             },
         },
-        "-=1000"
+        "-=500"
     )
     .add(
         {
             targets: ".gmail",
-            translateY: [-100, 0],
+            translateY: [20, 0],
             opacity: [0, 1],
             duration: durationTime,
-            easing: "easeInOutSine",
+            easing: "linear",
         },
-        "-=1000"
+        "-=500"
     )
-    .add(
-        {
-            targets: ".scroll",
-            opacity: [0, 1],
-            easing: "easeInOutQuart",
-            opacity: [0, 1],
-            duration: durationTime,
-            delay: (el, i) => {
-                return 300 + 100 * i;
-            },
+    .add({
+        targets: ".scroll",
+        opacity: [0, 1],
+        easing: "linear",
+        duration: durationTime,
+        delay: (el, i) => {
+            return 300 + 100 * i;
         },
-        "-=1000"
-    );
+    });
 
 // show div when scroll
 const observer = new IntersectionObserver((entries) => {
@@ -185,9 +180,9 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             anime({
                 targets: entry.target,
-                opacity: [0, 1],
-                duration: 500,
-                easing: "easeOutExpo",
+                opacity: "1",
+                duration: 1000,
+                easing: "easeInOutQuad",
             });
 
             observer.unobserve(entry.target);
@@ -198,7 +193,6 @@ const observer = new IntersectionObserver((entries) => {
 const items = document.querySelectorAll(".translateUp");
 
 items.forEach((item) => {
-    item.style.opacity = "1";
     observer.observe(item);
 });
 

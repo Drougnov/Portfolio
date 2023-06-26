@@ -788,6 +788,9 @@ footer .contact {
 .footer__text a:hover {
     color: var(--cta);
 }
+.translateUp {
+    opacity: 0;
+}
 
 /* ---------------------media-queries---------------------- */
 
